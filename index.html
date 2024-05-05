@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Creating Maps with Leaflet</title>
+
+<link rel="stylesheet" href=https://unpkg.com/leaflet@1.9.3/dist/leaflet.css 
+integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="crossorigin=""/>
+<script src=https://unpkg.com/leaflet@1.9.3/dist/leaflet.js 
+integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+</head>
+
+<body>
+<div id="map" style="height: 1080px"></div>
+<script>
+var map = L.map('map').setView([13.7563, 100.5018], 10);
+
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var marker = L.marker([13.75018, 100.49188]).addTo(map);
+marker.bindPopup("<b>The Grand Palace</b><br>Pranakorn district, Bangkok<br>").openPopup();
+var greenIcon = L.icon({
+iconUrl: 'https://lh3.googleusercontent.com/p/AF1QipMF-ocWKAetApFQh-i2hmgdKQZTXKkxAXTVjqAL=s1360-w1360-h1020',
+iconSize: [30, 30], // size of the icon
+iconAnchor: [45, 45], // point of the icon which will correspond to marker's location
+popupAnchor: [0, -39] // point from which the popup should open relative to the iconAnchor
+});
+L.marker([13.75018, 100.49188],{icon:greenIcon}).addTo(map).bindPopup("<b>The Grand Palace</b><br>Pranakorn district, Bangkok<br>");
+
+var marker = L.marker([13.7367854, 100.5318145]).addTo(map);
+marker.bindPopup("<b>Faculty of Engineering</b><br>Chulalongkorn University, Bangkok<br>").openPopup();
+var greenIcon = L.icon({
+iconUrl: 'https://lh5.googleusercontent.com/p/AF1QipPU5FEJzLHeP_2Pq1S_66B8U75FOmn7yjZyT_qv=w408-h306-k-no',
+iconSize: [30, 30],
+iconAnchor: [45, 45],
+popupAnchor: [0, -39]
+});
+L.marker([13.7367854, 100.5318145],{icon:greenIcon}).addTo(map).bindPopup("<b>Faculty of Engineering</b><br>Chulalongkorn University, Bangkok<br>");
+
+var marker = L.marker([13.7452543, 100.5332903]).addTo(map);
+marker.bindPopup("<b>Siam Paragon</b><br>991/1 Rama I Rd, Pathum Wan, Bangkok 10330<br>").openPopup();
+var greenIcon = L.icon({
+iconUrl: 'https://lh5.googleusercontent.com/p/AF1QipOMh0XcYyZvxQV1wr7BOwYtaUaF9x_K59kEgl82=w408-h477-k-no',
+iconSize: [30, 30],
+iconAnchor: [45, 45],
+popupAnchor: [0, -39]
+});
+L.marker([13.7452543, 100.5332903],{icon:greenIcon}).addTo(map).bindPopup("<b>Faculty of Engineering</b><br>Chulalongkorn University, Bangkok<br>");
+
+var marker = L.marker([13.7322349,100.5640418]).addTo(map);
+marker.bindPopup("<b>EmSphere</b><br>628 Sukhumvit Rd, Khlong Tan, Khlong Toei, Bangkok 10110<br>").openPopup();
+var greenIcon = L.icon({
+iconUrl: 'https://lh5.googleusercontent.com/p/AF1QipOzf_QHYW6uqCfusVGoH4P8LgqgSf9kptwEWadi=w408-h306-k-no',
+iconSize: [30, 30],
+iconAnchor: [45, 45],
+popupAnchor: [0, -39]
+});
+L.marker([13.7322349,100.5640418],{icon:greenIcon}).addTo(map).bindPopup("<b>EmSphere</b><br>628 Sukhumvit Rd, Khlong Tan, Khlong Toei, Bangkok 10110<br>");
+
+var marker = L.marker([13.726456781705235, 100.50999465756837]).addTo(map);
+marker.bindPopup("<b>ICONSIAM</b><br>299 Charoen Nakhon Rd, Khlong Ton Sai, Khlong San, Bangkok 10600<br>").openPopup();
+var greenIcon = L.icon({
+iconUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt7Qhof7XHwc3bpep4fZbAnAMS2fPdKstUlS9fkfZBuw&s',
+iconSize: [30, 30],
+iconAnchor: [45, 45],
+popupAnchor: [0, -39]
+});
+L.marker([13.726456781705235, 100.50999465756837],{icon:greenIcon}).addTo(map).bindPopup("<b>ICONSIAM</b><br>299 Charoen Nakhon Rd, Khlong Ton Sai, Khlong San, Bangkok 10600<br>");
+
+</script>
+</body>
+
+</html>
